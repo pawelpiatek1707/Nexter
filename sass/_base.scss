@@ -38,4 +38,6 @@ body{
   grid-template-rows: 80vh min-content 40vw repeat(3,min-content);//min
   // content means that the size of row is
   //as big as it is necessary to fit elements which are placed inside
+  grid-template-columns: repeat(8, 1fr); //at the begening our grid will by based
+  //on 8  columns grid
 }
