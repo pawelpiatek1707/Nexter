@@ -32,3 +32,10 @@ body{
   font-weight: 300;
   line-height: 1.6;
 }
+//start grid
+.container{
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3,min-content);//min
+  // content means that the size of row is
+  //as big as it is necessary to fit elements which are placed inside
+}
