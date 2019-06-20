@@ -39,8 +39,8 @@ body{
   // content means that the size of row is
   //as big as it is necessary to fit elements which are placed inside
   grid-template-columns: [sidebar-start]8rem[sidebar-end full-start]
-  1fr[center-start] repeat(8,[col-start] minmax(min-content ,14rem)[col-end])
-  [center-end] 1fr[full-end];
+  minmax(6rem, 1fr)[center-start] repeat(8,[col-start] minmax(min-content ,14rem)[col-end])
+  [center-end] minmax(6rem, 1fr)[full-end];
   //at the begening our grid will by based
   //on 8  columns grid
   //minmax function tells that maximum is 14rem but it could be lower and the minimum

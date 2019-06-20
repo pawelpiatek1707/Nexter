@@ -1,7 +1,7 @@
 .story{
   &__pictures{
     background-color: $color-primary;
-    grid-column: sidebar-end / col-start 5;
+    grid-column: sidebar-end / col-end 4;
   }
 
   &__content{
