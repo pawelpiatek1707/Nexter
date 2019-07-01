@@ -5,7 +5,7 @@
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
-  grid-gap: 7rem;
+  grid-gap: 5rem;
 }
 
 .home{
@@ -51,19 +51,28 @@
   }
 
   &__location,
+  &__rooms{
+    margin-top: 2.5rem;
+  }
+
+
+  &__location,
   &__rooms,
   &__area,
   &__price{
 
+    font-size: 1.5rem;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
       svg{
         fill: $color-primary;
         height: 2rem;
         width: 2rem;
       }
 
-      p{
 
-      }
   }
 
   &__button{
