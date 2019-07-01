@@ -19,9 +19,6 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-  .container > * {
-    padding: 40px;
-    font-size: 3rem; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -94,6 +91,7 @@ body {
 
 .features {
   grid-column: center-start/center-end;
+  margin: 15rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr); }
 
@@ -120,7 +118,21 @@ body {
 
 .story__pictures {
   background-color: #c69963;
-  grid-column: sidebar-end / col-end 4; }
+  grid-column: sidebar-end / col-end 4;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center; }
+
+.story__img--1 {
+  width: 100%;
+  grid-column: 2/6;
+  grid-row: 2/6; }
+
+.story__img--2 {
+  width: 100%;
+  grid-column: 4/7;
+  grid-row: 4/6; }
 
 .story__content {
   background-color: #f9f7f6;
