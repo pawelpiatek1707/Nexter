@@ -93,7 +93,6 @@ body {
   grid-column: col-start 7/full-end; }
 
 .features {
-  background-color: #aaa;
   grid-column: center-start/center-end;
   display: grid;
   grid-template-columns: repeat(3, 1fr); }
