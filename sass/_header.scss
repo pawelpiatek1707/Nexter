@@ -16,7 +16,13 @@
 
   @media only screen and (max-width: $bp-medium){
     grid-column: 1/-1;
-    //now the realtors occupy the entire area
+    //now the header occupy the entire area
+  }
+
+  @media only screen and (max-width: $bp-small){
+    padding: 5rem;
+    grid-column: 1/-1;
+
   }
 
 
