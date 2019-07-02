@@ -13,3 +13,64 @@ $color-grey-dark-2: #6D5D4B;
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px becauese 62.5% from 16 px is 10 px
+
+  //we use max-width media for desktop first approach and min-width media for mobile first
+  @media only screen and (max-width: $bp-largest){
+    font-size: 50%;
+  }
+}
+body{
+  font-family: $font-primary;
+  color: $color-grey-dark-2;
+  font-weight: 300;
+  line-height: 1.6;
+}
+//start grid
+.container{
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3,min-content);//min
+  // content means that the size of row is
+  //as big as it is necessary to fit elements which are placed inside
+  grid-template-columns: [sidebar-start]8rem[sidebar-end full-start]
+  minmax(6rem, 1fr)[center-start] repeat(8,[col-start] minmax(min-content ,14rem)[col-end])
+  [center-end] minmax(6rem, 1fr)[full-end];
+  //at the begening our grid will by based
+  //on 8  columns grid
+  //minmax function tells that maximum is 14rem but it could be lower and the minimum
+  // is min-content
+  //- thanks to using two columns that have 1fr width at the begining and in the end
+  //of our grid columns we can center our grid columns
+
+
+  @media only screen and (max-width: $bp-large){
+    grid-template-rows: 6rem 80vh min-content min-content repeat(3,min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr)[center-start]
+    repeat(8,[col-start] minmax(min-content ,14rem)[col-end])
+    [center-end] minmax(6rem, 1fr)[full-end];
+  } //we change position of the sidebar in the grid
+
+  @media only screen and (max-width: $bp-medium){
+    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3,min-content);
+    //changing the grid definition. On all screens narrower then 800px the realtors section
+    //goes below header and the row where the header is placed has the height of 100% of view port height
+
+  }
+}
